@@ -9,13 +9,15 @@
     border: solid, 2px, red;
     display: flex;
     flex-wrap: wrap;
-    height: 800px;
-    width: 800px;
+    height: 400px;
+    width: 400px;
+    margin: auto;
 }
 
 .content {
-    flex: 1 0 150px;
-    height: 150px;
+    flex: 1 0 99px;
+    height: 99px;
     border: solid, 2px, blue;
+    background-color: azure;
 }
 
