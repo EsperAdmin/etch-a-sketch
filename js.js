@@ -3,7 +3,6 @@ const container = document.querySelector("#container");
 createDivs();
 
 const contentSelect = document.querySelectorAll(".content")
-console.log(contentSelect)
 contentSelect.forEach(contentSelect => contentSelect.addEventListener("mouseenter", (event) => {event.target.style.backgroundColor = "orange";}));
 
 

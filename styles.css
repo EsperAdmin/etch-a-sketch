@@ -9,14 +9,14 @@
     border: solid, 2px, red;
     display: flex;
     flex-wrap: wrap;
-    height: 400px;
-    width: 400px;
+    height: 800px;
+    width: 800px;
     margin: auto;
 }
 
 .content {
-    flex: 1 0 99px;
-    height: 99px;
+    flex: 1 0 auto;
+    aspect-ratio: 1 / 1;
     border: solid, 2px, blue;
     background-color: azure;
 }
