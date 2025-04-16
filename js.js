@@ -4,9 +4,6 @@ let getGridSize = 16 * 16;
 let getGridSizeRaw = 16;
 createDivs(getGridSize, getGridSizeRaw);
 
-const contentSelect = document.querySelectorAll(".content")
-contentSelect.forEach(contentSelect => contentSelect.addEventListener("mouseenter", (event) => {event.target.style.backgroundColor = "red";}));
-
 const gridButton = document.querySelector(".gridButton");
 gridButton.addEventListener("click", () => {
     let getPrompt = prompt("Pick a size, any size! Just don't go over 100!")
@@ -16,7 +13,11 @@ gridButton.addEventListener("click", () => {
     } else {
     getGridSize = Number(getPrompt) * Number(getPrompt);
     getGridSizeRaw = Number(getPrompt);
-    console.log(getGridSizeRaw);
+    
+    document.querySelectorAll(".content").forEach(element => {
+        element.remove();
+    })
+
     createDivs(getGridSize, getGridSizeRaw);
     }
 });
@@ -27,10 +28,6 @@ function createDivs (gridSize, getGridSizeRaw) {
         let calculateGrid = (796 / getGridSizeRaw);
 
         const content = document.createElement("div");
-        // content.style.height = `${calculateGrid}`;
-        // content.style.flexBasis = `${calculateGrid}`;
-        // content.style.color = "red";
-
 
         content.classList.add("content");
 
@@ -40,4 +37,7 @@ function createDivs (gridSize, getGridSizeRaw) {
         root.style.setProperty("--basis", calculateGrid + "px");
         root.style.setProperty("--height", calculateGrid + "px");
     }
+
+    const contentSelect = document.querySelectorAll(".content")
+    contentSelect.forEach(contentSelect => contentSelect.addEventListener("mouseenter", (event) => {event.target.style.backgroundColor = "red";}));
 }
