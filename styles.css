@@ -17,7 +17,21 @@
 .content {
     flex: 1 0 var(--basis);
     height: var(--height);
-    border: solid, 1px, blue;
+    border: solid, 1px, black;
     background-color: azure;
+}
+
+.gridButton {
+    display: flex;
+    justify-content: center;
+    margin: 15px auto 5px auto;
+    background-color: azure;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;
+    color: rgb(70, 70, 70);
+    font-weight: 700;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
 }
 
