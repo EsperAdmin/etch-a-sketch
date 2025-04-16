@@ -22,6 +22,17 @@ gridButton.addEventListener("click", () => {
     }
 });
 
+const clearGrid = document.querySelector(".clearGrid");
+clearGrid.addEventListener("click", () => {
+    alert("Grid clearned!")
+
+    document.querySelectorAll(".content").forEach(element => {
+        element.remove();
+    })
+
+    createDivs(getGridSize, getGridSizeRaw);
+});
+
 
 function createDivs (gridSize, getGridSizeRaw) {
     for (i = 0; i < gridSize; i++) {

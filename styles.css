@@ -22,9 +22,7 @@
 }
 
 .gridButton {
-    display: flex;
-    justify-content: center;
-    margin: 15px auto 5px auto;
+    margin: 15px 5px 5px 5px;
     background-color: azure;
     border-radius: 5px;
     height: 25px;
@@ -33,5 +31,22 @@
     font-weight: 700;
     font-size: large;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.clearGrid {
+    margin: 15px 5px 5px 5px;
+    background-color: azure;
+    border-radius: 5px;
+    height: 25px;
+    width: 150px;
+    color: rgb(70, 70, 70);
+    font-weight: 700;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
 }
 
