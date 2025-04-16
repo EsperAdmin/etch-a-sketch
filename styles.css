@@ -15,9 +15,9 @@
 }
 
 .content {
-    flex: 1 0 auto;
-    aspect-ratio: 1 / 1;
-    border: solid, 2px, blue;
+    flex: 1 0 var(--basis);
+    height: var(--height);
+    border: solid, 1px, blue;
     background-color: azure;
 }
 
