@@ -5,10 +5,21 @@ let getGridSizeRaw = 16;
 createDivs(getGridSize, getGridSizeRaw);
 
 const contentSelect = document.querySelectorAll(".content")
-contentSelect.forEach(contentSelect => contentSelect.addEventListener("mouseenter", (event) => {event.target.style.backgroundColor = "orange";}));
+contentSelect.forEach(contentSelect => contentSelect.addEventListener("mouseenter", (event) => {event.target.style.backgroundColor = "red";}));
 
+const gridButton = document.querySelector(".gridButton");
+gridButton.addEventListener("click", () => {
+    let getPrompt = prompt("Pick a size, any size! Just don't go over 100!")
 
-
+    if (Number(getPrompt) > 100) {
+        alert("You can't pick over 100!")
+    } else {
+    getGridSize = Number(getPrompt) * Number(getPrompt);
+    getGridSizeRaw = Number(getPrompt);
+    console.log(getGridSizeRaw);
+    createDivs(getGridSize, getGridSizeRaw);
+    }
+});
 
 
 function createDivs (gridSize, getGridSizeRaw) {
